@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>{{ book.name }}</h1>
+    <h2>{{ book.description }}</h2>
+    <h3>{{ book.author }}</h3>
+    <h4>{{ book.category }}</h4>
+    {% for comment in comments %}
+    <ul>
+        <li>{{ comment.nickname }}</li>
+        <li>{{ comment.book }}</li>
+        <li>{{ comment.comment }}</li>
+    </ul>
+    {% endfor %}
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="nickname" placeholder="Имя автора" required>
+        <textarea name="comment" placeholder="Комментарий" cols="30" rows="10"></textarea>
+        <button type="submit">
+            Добавить
+        </button>
+    </form>
+</body>
+</html>
