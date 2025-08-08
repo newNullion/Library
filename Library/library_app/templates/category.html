@@ -8,7 +8,7 @@
     <ul>
         {% for author in authors %}
         <li>
-            <a href="{% url 'author_books' category.pk author.pk %}">
+            <a href="{% url 'library:author_books' category.pk author.pk %}">
                 {{ author.full_name }}
             </a>
         </li>

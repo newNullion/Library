@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #ececec;
+}
+
+.container {
+    margin-right: 130px;
+    margin-left: 130px;
+}
+
+.header-container {
+    margin-right: 130px;
+    margin-left: 130px;
+    height: 100%;
+}
+
+.header-container {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.header {
+    background-color: antiquewhite;
+    background-color: rgb(44, 44, 44);
+    transform: scale(-);
+}
+
+.header-title {
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+}
+
+.header-dropdown {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    width: 100px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #b1b1b1;
+}
+
+.dropdown-menu a:hover {
+    background-color: #b1b1b1;
+    color: white;
+}
+
+.header-dropdown__btn {
+    cursor: pointer;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,6 +1,8 @@
 from django.urls import path
 from .views import CategoriesView, CategoryView, BooksView, BookView
 
+app_name = 'library'
+
 
 
 urlpatterns = [

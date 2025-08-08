@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-dropdown">
+                <div id="dropdownButton" class="header-dropdown__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </div>
+                <div id="dropdownMenu" class="dropdown-menu hidden">
+                    {% for category in categories %}
+                    <a href="{% url 'library:category' category.pk %}">{{ category.name }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="header-title">
+                Library
+            </div>
+            <div></div>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Контент -->
+        {% endblock %}
+    </main>
+
+    <script src="{% static 'js/menu.js' %}"></script>
+
+</body>
+</html>
