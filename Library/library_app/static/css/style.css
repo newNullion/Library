@@ -26,7 +26,6 @@ body {
     display: flex;
     text-align: center;
     justify-content: space-between;
-    padding: 15px 0;
 }
 
 .header {
@@ -36,9 +35,12 @@ body {
 }
 
 .header-title {
+    display: flex;
+    align-items: center;
     font-size: 28px;
     font-weight: 500;
     color: white;
+    top: -50%;
 }
 
 .header-dropdown {
@@ -46,6 +48,7 @@ body {
     align-items: center;
     position: relative;
     height: 100%;
+    padding: 15px 0;
 }
 
 .dropdown-menu {
@@ -77,4 +80,9 @@ body {
 
 .hidden {
     display: none;
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
 }

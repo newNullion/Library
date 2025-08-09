@@ -2,14 +2,7 @@
 
 {% block content %}
 <section>
-    <ul>
-        {% for category in categories %}
-        <li>
-            <a href="{% url 'library:category' category.pk %}">
-                {{ category.name }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+    <div class="title">Категории</div>
+    <div class="categories-list"></div>
 </section>
 {% endblock %}
